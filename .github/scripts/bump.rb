@@ -5,7 +5,7 @@ unless /^(major|minor|patch)$/.match?(BUMP_TYPE)
 	abort("Please, pass one of these major/minor/patch bump type.")
 end
 
-VERSION = CURRENT_TAG.match(/v([0-9]+\.[0-9]+\.[0-9]+)/).captures.first
+VERSION = CURRENT_TAG.match(/([0-9]+\.[0-9]+\.[0-9]+)/).captures.first
 VERSION_PARTS = VERSION.split(".").map(&:to_i)
 
 if BUMP_TYPE == "major"

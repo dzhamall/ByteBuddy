@@ -28,7 +28,7 @@ let package = Package(
             ]
         ),
         .target(name: "ByteBuddy", dependencies: ["Shared"]),
-        .testTarget(name: "ByteBuddyTests", dependencies: ["ByteBuddy"])
+        .testTarget(name: "Tests", dependencies: ["ByteBuddy"], path: "Tests")
     ],
     swiftLanguageVersions: [.v5]
 )
