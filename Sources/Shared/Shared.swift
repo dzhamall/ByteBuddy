@@ -12,12 +12,9 @@ public enum ByteBuddy {
         case serviceError(Swift.Error)
         case noHttpResponse
         case unexpectedHttpStatusCode(_ response: HTTPURLResponse)
-        case noData(_ response: HTTPURLResponse)
 
         case shellError(output: String?)
         case parsingError(output: Data)
-
-        case leaksFoud(output: LeaksOutput)
 
         case unknown
     }
