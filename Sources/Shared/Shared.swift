@@ -9,7 +9,6 @@ public enum ByteBuddy {
 
     public enum Error: Swift.Error {
         case urlIsNotValid(_ url: String)
-        case serviceError(Swift.Error)
         case noHttpResponse
         case unexpectedHttpStatusCode(_ response: HTTPURLResponse)
 
@@ -17,18 +16,6 @@ public enum ByteBuddy {
         case parsingError(output: Data)
 
         case unknown
-    }
-}
-
-// MARK: - Outputs
-
-public struct LeaksOutput {
-    public let count: Int
-    public let message: String
-
-    public init(count: Int, message: String) {
-        self.count = count
-        self.message = message
     }
 }
 

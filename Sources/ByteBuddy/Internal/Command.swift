@@ -1,15 +1,13 @@
-//  Command.swift
+//  ByteBuddy.swift
 //  Created by dzhamall
 
 import Foundation
 import Shared
 
 @frozen
-public enum Command: String {
+enum Command: String {
     case leaks, heap
 }
-
-// MARK: - Internal
 
 extension Command {
     func asURLRequest(env: Environment) throws -> URLRequest {

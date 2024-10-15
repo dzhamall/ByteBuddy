@@ -1,16 +1,14 @@
-//  ParserTests.swift
+//  ByteBuddyTests.swift
 //  Created by dzhamall
 
 import XCTest
 @testable import ByteBuddy
 
-final class ParserTests: XCTestCase {
-
-    // MARK: - Leaks
+final class LeaksParserTests: XCTestCase {
 
     func testParseLeaksOutputCorrectly() throws {
         // Act
-        let leaks = try Parser.parseLeaksOutput(leaksOutput)
+        let leaks = try Parser.Leaks.parseLeaksOutput(leaksOutput)
 
         // Assert
         XCTAssertEqual(leaks.count, 2)
@@ -37,7 +35,7 @@ final class ParserTests: XCTestCase {
 
     func testParseEmptyLeaksOutputCorrectly() throws {
         // Act
-        let leaks = try Parser.parseLeaksOutput(emptyLeaksOutput)
+        let leaks = try Parser.Leaks.parseLeaksOutput(emptyLeaksOutput)
 
         // Arrange
         XCTAssertEqual(leaks.count, 0)
@@ -52,7 +50,7 @@ final class ParserTests: XCTestCase {
     }
 }
 
-private extension ParserTests {
+private extension LeaksParserTests {
     var leaksOutput: Data {
     """
     Invalid connection: com.apple.coresymbolicationd
