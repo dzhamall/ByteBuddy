@@ -5,7 +5,6 @@ import Foundation
 import Shared
 
 enum Shell {
-
     struct Output {
         let data: String?
         let status: Int32

@@ -1,0 +1,12 @@
+{
+  "objects" : [
+    {
+      "avg" : 944,
+      "type" : "Swift",
+      "count" : 1,
+      "bytes" : 944,
+      "className" : "ViewController",
+      "binary" : "ByteBuddyExample"
+    }
+  ]
+}
