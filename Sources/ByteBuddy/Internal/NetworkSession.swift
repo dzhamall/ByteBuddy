@@ -3,11 +3,11 @@
 
 import Foundation
 
-public protocol NetworkSession: AnyObject {
+protocol NetworkSession: AnyObject {
     func loadData(for request: URLRequest) async throws -> (Data, URLResponse)
 }
 
-public extension NetworkSession where Self: URLSession {
+extension NetworkSession where Self: URLSession {
     func loadData(for request: URLRequest) async throws -> (Data, URLResponse) {
         try await data(for: request)
     }

@@ -2,7 +2,7 @@
 //  Created by dzhamall
 
 import Foundation
-import ByteBuddy
+@testable import ByteBuddy
 
 final class NetworkSessionMock {
     let data: Data

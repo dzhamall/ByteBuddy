@@ -10,7 +10,12 @@ public final class MemoryProfiler {
     private let env: Environment
     private let networkSession: NetworkSession
 
-    public init(env: Environment, networkSession: NetworkSession = URLSession(configuration: .default)) {
+    public init(env: Environment) {
+        self.env = env
+        self.networkSession = URLSession(configuration: .default)
+    }
+
+    internal init(env: Environment, networkSession: NetworkSession) {
         self.env = env
         self.networkSession = networkSession
     }

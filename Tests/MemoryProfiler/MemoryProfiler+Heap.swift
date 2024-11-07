@@ -2,9 +2,10 @@
 //  Created by dzhamall
 
 import Foundation
-import ByteBuddy
 import Shared
 import XCTest
+
+@testable import ByteBuddy
 
 final class MemoryProfilerHeapTests: XCTestCase {
     func testTakeHeapSnapshot() async throws {
