@@ -4,6 +4,8 @@
 import Foundation
 import Shared
 
+// MARK: - Dictionary
+
 extension Dictionary where Value == Int, Key == HeapOutput.Object {
     mutating func increment(for element: Key) {
         self[element, default: 0] += element.count
@@ -12,5 +14,13 @@ extension Dictionary where Value == Int, Key == HeapOutput.Object {
     mutating func decrement(for element: Key) {
         guard let count = self[element] else { return }
         self[element] = ((count - element.count) > 1) ? count - element.count : nil
+    }
+}
+
+// MARK: - Environment
+
+extension Environment {
+    var localhost: String {
+        "http://localhost:\(port)"
     }
 }

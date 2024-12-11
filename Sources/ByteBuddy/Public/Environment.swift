@@ -13,11 +13,3 @@ public struct Environment {
         self.pid = pid
     }
 }
-
-// MARK: - Internal
-
-extension Environment {
-    var localhost: String {
-        "http://localhost:\(port)"
-    }
-}
