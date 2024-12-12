@@ -1,5 +1,6 @@
 CLTEXECUTOR_NAME = CLTExecutor
 MODULE_NAME = ByteBuddy
+MODULE_NAME_STATIC = ByteBuddy-static
 
 ARHIVE_DIRECTORY_PATH = $(MODULE_NAME)-iphonesimulator.xcarchive
 IPHONEOS_SIMULATOR_DIRECTORY = $(CURDIR)/$(ARHIVE_DIRECTORY_PATH)
@@ -7,7 +8,7 @@ OUTPUT_DIR = $(CURDIR)/$(MODULE_NAME).xcframework
 
 .PHONY: release
 release:
-	swift build -c release
+	swift build -c release --product $(MODULE_NAME_STATIC)
 
 .PHONY: createXCFramework
 createXCFramework:

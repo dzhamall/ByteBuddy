@@ -11,8 +11,10 @@ let package = Package(
     ],
     products: [
         .executable(name: "CLTExecutor", targets: ["CLTExecutor"]),
+        .library(name: "ByteBuddy-static", type: .static, targets: ["ByteBuddy"]),
         // https://forums.swift.org/t/how-to-build-swift-package-as-xcframework/41414/3
-        .library(name: "ByteBuddy", type: .dynamic, targets: ["ByteBuddy"]),
+        .library(name: "ByteBuddy", type: .dynamic, targets: ["ByteBuddy"])
+
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "0.5.0"),
