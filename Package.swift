@@ -6,12 +6,11 @@ import PackageDescription
 let package = Package(
     name: "ByteBuddy",
     platforms: [
-        .iOS(.v15),
-        .macOS(.v14)
+        .iOS(.v15)
     ],
     products: [
         .executable(name: "CLTExecutor", targets: ["CLTExecutor"]),
-        .library(name: "ByteBuddy", targets: ["ByteBuddy"])
+        .library(name: "ByteBuddy", type: .dynamic, targets: ["ByteBuddy"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "0.5.0"),

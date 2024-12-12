@@ -1,8 +1,39 @@
 CLTEXECUTOR_NAME = CLTExecutor
+MODULE_NAME = ByteBuddy
+
+ARHIVE_DIRECTORY_PATH = $(MODULE_NAME)-iphonesimulator.xcarchive
+IPHONEOS_SIMULATOR_DIRECTORY = $(CURDIR)/$(ARHIVE_DIRECTORY_PATH)
+OUTPUT_DIR = $(CURDIR)/$(MODULE_NAME).xcframework
 
 .PHONY: release
 release:
 	swift build -c release
+
+.PHONY: createXCFramework
+createXCFramework:
+	set -x
+	set -e
+
+	## Cleanup
+	rm -rf $(IPHONEOS_SIMULATOR_DIRECTORY)
+	rm -rf $(OUTPUT_DIR)
+
+	# Archive
+	xcodebuild archive -scheme $(MODULE_NAME) \
+	-destination "generic/platform=iOS Simulator" \
+	-archivePath $(IPHONEOS_SIMULATOR_DIRECTORY) \
+	-sdk iphonesimulator \
+	SKIP_INSTALL=NO \
+	BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
+
+	## XCFramework
+	xcodebuild -create-xcframework \
+	-framework "$(IPHONEOS_SIMULATOR_DIRECTORY)/Products/usr/local/lib/$(MODULE_NAME).framework" \
+	-output $(OUTPUT_DIR)
+
+	## Cleanup
+	rm -rf $(IPHONEOS_SIMULATOR_DIRECTORY)
+
 
 .PHONY: buildCLTExecutor
 buildCLTExecutor:
