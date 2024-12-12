@@ -70,7 +70,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Release Draft
-        uses: softprops/action-gh-release@v2.0.2
+        uses: softprops/action-gh-release@v2
         with:
           name: 📟 ByteBuddy ${{ env.NEW_VERSION }}
           draft: true
@@ -78,3 +78,6 @@ jobs:
           discussion_category_name: Releases
           fail_on_unmatched_files: true
           tag_name: ${{ env.NEW_VERSION }}
+          files: |
+            Release/ByteBuddy-arm64.zip
+            Release/ByteBuddy-XCFramework.zip
