@@ -61,6 +61,9 @@ jobs:
       - name: Build Release
         run: make release
 
+      - name: Create XCFramework
+        run: make createXCFramework
+
       - name: Git Push
         run: git push origin
         env:
