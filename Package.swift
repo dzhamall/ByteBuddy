@@ -6,10 +6,12 @@ import PackageDescription
 let package = Package(
     name: "ByteBuddy",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v15),
+        .macOS(.v14)
     ],
     products: [
         .executable(name: "CLTExecutor", targets: ["CLTExecutor"]),
+        // https://forums.swift.org/t/how-to-build-swift-package-as-xcframework/41414/3
         .library(name: "ByteBuddy", type: .dynamic, targets: ["ByteBuddy"]),
     ],
     dependencies: [

@@ -2,7 +2,7 @@
 //  Created by dzhamall
 
 import Foundation
-import os
+import OSLog
 
 public enum ByteBuddy {
     public static let urlPath = "/bytebyddy"
@@ -32,9 +32,15 @@ public enum HeaderFieldKey: String {
 @frozen
 public enum Logger {
     private static let prefix = "📟 ByteBuddy"
-    private static let osLogger = os.Logger(subsystem: "\(prefix).logger", category: "lib")
 
-    public static func log(_ message: String, level: OSLogType = .info) {
-        osLogger.log(level: level, "[\(prefix)]: \(message)")
+    private static let osLog = OSLog(subsystem: "\(prefix).log", category: "ByteBuddyLib")
+
+    public static func log(
+        _ message: String,
+        level: OSLogType = .info,
+        file: String = #file,
+        function: String = #function
+    ) {
+        os_log("%{public}s", log: osLog, type: level, message)
     }
 }

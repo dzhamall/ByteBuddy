@@ -11,7 +11,6 @@ release:
 
 .PHONY: createXCFramework
 createXCFramework:
-	set -x
 	set -e
 
 	## Cleanup
