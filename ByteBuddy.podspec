@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                  = "ByteBuddy"
-  spec.version               = "0.0.2"
+  spec.version               = "0.0.3"
   spec.summary               = "Automate Testing for Swift Memory Issues."
 
   spec.homepage              = "https://github.com/dzhamall/ByteBuddy"
@@ -10,8 +10,8 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "15.0"
   spec.swift_version         = "5.0"
 
-  spec.source                = { :git => "https://github.com/dzhamall/ByteBuddy.git", :tag => "#{spec.version}" }
+  spec.source                = { :http => "https://github.com/dzhamall/ByteBuddy/releases/download/#{spec.version}/ByteBuddy-XCFramework.zip" }
   spec.vendored_frameworks   = "ByteBuddy.xcframework"
-  spec.preserve_paths        = "bin/CLTExecutor"
-
+  spec.static_framework      = true
+  # spec.preserve_paths        = "bin/CLTExecutor"
 end

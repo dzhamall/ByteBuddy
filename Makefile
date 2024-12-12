@@ -8,7 +8,14 @@ OUTPUT_DIR = $(CURDIR)/$(MODULE_NAME).xcframework
 
 .PHONY: release
 release:
+	rm -rf Release
+	mkdir -p Release/ByteBuddy
+
+	make clean
+
 	swift build -c release --product $(MODULE_NAME_STATIC)
+	cp -f -R `swift build -c release --product $(MODULE_NAME_STATIC) --show-bin-path`/* Release/ByteBuddy/
+	cd Release && zip -r ByteBuddy-arm64.zip ByteBuddy
 
 .PHONY: createXCFramework
 createXCFramework:
@@ -31,15 +38,17 @@ createXCFramework:
 	-framework "$(IPHONEOS_SIMULATOR_DIRECTORY)/Products/usr/local/lib/$(MODULE_NAME).framework" \
 	-output $(OUTPUT_DIR)
 
+	cp -f -R $(OUTPUT_DIR) Release/
+	cd Release && zip -r ByteBuddy-XCFramework.zip $(MODULE_NAME).xcframework
+
 	## Cleanup
 	rm -rf $(IPHONEOS_SIMULATOR_DIRECTORY)
-
 
 .PHONY: buildCLTExecutor
 buildCLTExecutor:
 	@printf "Building CLTExecutor..."
-	@swift build -c release -Xswiftc -whole-module-optimization --product $(CLTEXECUTOR_NAME)
-	@cp "`swift build -c release --product $(CLTEXECUTOR_NAME) --show-bin-path`/$(CLTEXECUTOR_NAME)" ./bin
+	swift build -c release -Xswiftc -whole-module-optimization --product $(CLTEXECUTOR_NAME)
+	cp "`swift build -c release --product $(CLTEXECUTOR_NAME) --show-bin-path`/$(CLTEXECUTOR_NAME)" ./bin
 	@echo "Done"
 
 .PHONY: cleanBuildCLTExecutor
@@ -47,12 +56,8 @@ cleanBuildCLTExecutor: cleanArtifacts buildCLTExecutor
 
 .PHONY: clean
 clean:
-	swift package reset
+	swift package clean
 	rm -rdf .swiftpm/xcode
 	rm -rdf .build/
-	rm Package.resolved
-	rm .DS_Store
-
-.PHONY: cleanArtifacts
-cleanArtifacts:
-	swift package clean
+	rm -rf Package.resolved
+	rm -rf .DS_Store
