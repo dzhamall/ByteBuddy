@@ -8,7 +8,7 @@ extension Parser {
     enum Leaks {
         static func parseLeaksOutput(_ data: Data) throws -> LeaksOutput {
             guard let strData = String(data: data, encoding: .utf8) else {
-                throw Shared.ByteBuddy.Error.parsingError(output: data)
+                throw Common.Error.parsingError(output: data)
             }
             
             let pattern = "(leaks Report Version:\\s*\\d+\\.\\d+.*)"
@@ -21,7 +21,7 @@ extension Parser {
                 let numberOfLeaks = getNumberOfLeaks(from: extractedText)
                 return LeaksOutput(count: numberOfLeaks, message: extractedText)
             }
-            throw Shared.ByteBuddy.Error.parsingError(output: data)
+            throw Common.Error.parsingError(output: data)
         }
         
         private static func getNumberOfLeaks(from message: String) -> Int {

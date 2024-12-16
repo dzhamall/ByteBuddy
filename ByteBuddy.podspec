@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
   spec.source                = { :http => "https://github.com/dzhamall/ByteBuddy/releases/download/#{spec.version}/ByteBuddy-XCFramework.zip" }
   spec.vendored_frameworks   = "ByteBuddy.xcframework"
   spec.static_framework      = true
-  # spec.preserve_paths        = "bin/CLTExecutor"
+  spec.preserve_paths        = "bin/CLTExecutor"
 end

@@ -8,7 +8,7 @@ extension Parser {
     enum Heap {
         static func parseHeapOutput(_ data: Data, isIncluded: (HeapOutput.Object) -> Bool) throws -> HeapOutput {
             guard let dataLines = String(data: data, encoding: .utf8)?.components(separatedBy: .newlines).dropFirst(36) else {
-                throw Shared.ByteBuddy.Error.parsingError(output: data)
+                throw Common.Error.parsingError(output: data)
             }
 
             let objects = dataLines.compactMap { line -> HeapOutput.Object? in
@@ -29,7 +29,7 @@ extension Parser {
             isIncluded: (HeapOutput.Object) -> Bool
         ) throws -> ([HeapOutput.Object: Int], [HeapOutput.Object]) {
             guard let dataLines = String(data: data, encoding: .utf8)?.components(separatedBy: .newlines).dropFirst(36) else {
-                throw Shared.ByteBuddy.Error.parsingError(output: data)
+                throw Common.Error.parsingError(output: data)
             }
 
             var objects = [HeapOutput.Object: Int]()

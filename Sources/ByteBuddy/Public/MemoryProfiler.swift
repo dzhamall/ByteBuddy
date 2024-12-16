@@ -4,7 +4,7 @@
 import Foundation
 import Shared
 
-typealias InternalError = ByteBuddy.Error
+typealias InternalError = Common.Error
 
 public final class MemoryProfiler {
     private let env: Environment

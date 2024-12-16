@@ -11,9 +11,9 @@ enum Command: String {
 
 extension Command {
     func asURLRequest(env: Environment) throws -> URLRequest {
-        let urlString = env.localhost + ByteBuddy.urlPath
+        let urlString = env.localhost + Common.urlPath
         guard let url = URL(string: urlString) else {
-            throw ByteBuddy.Error.urlIsNotValid(urlString)
+            throw Common.Error.urlIsNotValid(urlString)
         }
 
         var request = URLRequest(url: url)

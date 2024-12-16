@@ -4,7 +4,7 @@
 import Foundation
 import OSLog
 
-public enum ByteBuddy {
+public enum Common {
     public static let urlPath = "/bytebyddy"
 
     public enum Error: Swift.Error {

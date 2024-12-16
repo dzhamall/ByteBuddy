@@ -48,7 +48,7 @@ jobs:
           TAG=$(cat tag.txt)
           echo "tag=$TAG" >> $GITHUB_ENV
 
-      - name: Bump and Git Commit
+      - name: Bump
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
