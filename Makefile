@@ -64,6 +64,7 @@ createXCFramework:
 
 	cp -f -R $(OUTPUT_DIR) Release/$(MODULE_NAME)-XCFramework/
 	cp -f -R bin Release/$(MODULE_NAME)-XCFramework/
+	cp -f -R LICENSE Release/$(MODULE_NAME)-XCFramework/
 	cd Release && zip -r ByteBuddy-XCFramework.zip $(MODULE_NAME)-XCFramework
 
 	# Cleanup
