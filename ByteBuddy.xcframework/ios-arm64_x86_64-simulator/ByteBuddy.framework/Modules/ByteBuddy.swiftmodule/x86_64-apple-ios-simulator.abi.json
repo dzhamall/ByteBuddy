@@ -1,0 +1,3208 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HeapComparingResult",
+        "printedName": "HeapComparingResult",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "State",
+            "printedName": "State",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "addedObjects",
+                "printedName": "addedObjects",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[ByteBuddy.HeapOutput.Object : Swift.Int]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Object",
+                        "printedName": "ByteBuddy.HeapOutput.Object",
+                        "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9ByteBuddy19HeapComparingResultO5StateV12addedObjectsSDyAA0C6OutputV6ObjectVSiGvp",
+                "mangledName": "$s9ByteBuddy19HeapComparingResultO5StateV12addedObjectsSDyAA0C6OutputV6ObjectVSiGvp",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[ByteBuddy.HeapOutput.Object : Swift.Int]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Object",
+                            "printedName": "ByteBuddy.HeapOutput.Object",
+                            "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9ByteBuddy19HeapComparingResultO5StateV12addedObjectsSDyAA0C6OutputV6ObjectVSiGvg",
+                    "mangledName": "$s9ByteBuddy19HeapComparingResultO5StateV12addedObjectsSDyAA0C6OutputV6ObjectVSiGvg",
+                    "moduleName": "ByteBuddy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "missingObjects",
+                "printedName": "missingObjects",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[ByteBuddy.HeapOutput.Object : Swift.Int]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Object",
+                        "printedName": "ByteBuddy.HeapOutput.Object",
+                        "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9ByteBuddy19HeapComparingResultO5StateV14missingObjectsSDyAA0C6OutputV6ObjectVSiGvp",
+                "mangledName": "$s9ByteBuddy19HeapComparingResultO5StateV14missingObjectsSDyAA0C6OutputV6ObjectVSiGvp",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[ByteBuddy.HeapOutput.Object : Swift.Int]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Object",
+                            "printedName": "ByteBuddy.HeapOutput.Object",
+                            "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9ByteBuddy19HeapComparingResultO5StateV14missingObjectsSDyAA0C6OutputV6ObjectVSiGvg",
+                    "mangledName": "$s9ByteBuddy19HeapComparingResultO5StateV14missingObjectsSDyAA0C6OutputV6ObjectVSiGvg",
+                    "moduleName": "ByteBuddy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "State",
+                    "printedName": "ByteBuddy.HeapComparingResult.State",
+                    "usr": "s:9ByteBuddy19HeapComparingResultO5StateV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "State",
+                    "printedName": "ByteBuddy.HeapComparingResult.State",
+                    "usr": "s:9ByteBuddy19HeapComparingResultO5StateV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9ByteBuddy19HeapComparingResultO5StateV2eeoiySbAE_AEtFZ",
+                "mangledName": "$s9ByteBuddy19HeapComparingResultO5StateV2eeoiySbAE_AEtFZ",
+                "moduleName": "ByteBuddy",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:9ByteBuddy19HeapComparingResultO5StateV",
+            "mangledName": "$s9ByteBuddy19HeapComparingResultO5StateV",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "equal",
+            "printedName": "equal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ByteBuddy.HeapComparingResult.Type) -> ByteBuddy.HeapComparingResult",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HeapComparingResult",
+                    "printedName": "ByteBuddy.HeapComparingResult",
+                    "usr": "s:9ByteBuddy19HeapComparingResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ByteBuddy.HeapComparingResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeapComparingResult",
+                        "printedName": "ByteBuddy.HeapComparingResult",
+                        "usr": "s:9ByteBuddy19HeapComparingResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ByteBuddy19HeapComparingResultO5equalyA2CmF",
+            "mangledName": "$s9ByteBuddy19HeapComparingResultO5equalyA2CmF",
+            "moduleName": "ByteBuddy"
+          },
+          {
+            "kind": "Var",
+            "name": "nonEqual",
+            "printedName": "nonEqual",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ByteBuddy.HeapComparingResult.Type) -> (ByteBuddy.HeapComparingResult.State) -> ByteBuddy.HeapComparingResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ByteBuddy.HeapComparingResult.State) -> ByteBuddy.HeapComparingResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeapComparingResult",
+                        "printedName": "ByteBuddy.HeapComparingResult",
+                        "usr": "s:9ByteBuddy19HeapComparingResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(state: ByteBuddy.HeapComparingResult.State)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "State",
+                            "printedName": "ByteBuddy.HeapComparingResult.State",
+                            "usr": "s:9ByteBuddy19HeapComparingResultO5StateV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ByteBuddy.HeapComparingResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeapComparingResult",
+                        "printedName": "ByteBuddy.HeapComparingResult",
+                        "usr": "s:9ByteBuddy19HeapComparingResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ByteBuddy19HeapComparingResultO8nonEqualyA2C5StateV_tcACmF",
+            "mangledName": "$s9ByteBuddy19HeapComparingResultO8nonEqualyA2C5StateV_tcACmF",
+            "moduleName": "ByteBuddy"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ByteBuddy19HeapComparingResultO11descriptionSSvp",
+            "mangledName": "$s9ByteBuddy19HeapComparingResultO11descriptionSSvp",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ByteBuddy19HeapComparingResultO11descriptionSSvg",
+                "mangledName": "$s9ByteBuddy19HeapComparingResultO11descriptionSSvg",
+                "moduleName": "ByteBuddy",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HeapComparingResult",
+                "printedName": "ByteBuddy.HeapComparingResult",
+                "usr": "s:9ByteBuddy19HeapComparingResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HeapComparingResult",
+                "printedName": "ByteBuddy.HeapComparingResult",
+                "usr": "s:9ByteBuddy19HeapComparingResultO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ByteBuddy19HeapComparingResultO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9ByteBuddy19HeapComparingResultO2eeoiySbAC_ACtFZ",
+            "moduleName": "ByteBuddy",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9ByteBuddy19HeapComparingResultO",
+        "mangledName": "$s9ByteBuddy19HeapComparingResultO",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Environment",
+        "printedName": "Environment",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(port:pid:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Environment",
+                "printedName": "ByteBuddy.Environment",
+                "usr": "s:9ByteBuddy11EnvironmentV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt16",
+                "printedName": "Swift.UInt16",
+                "usr": "s:s6UInt16V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ByteBuddy11EnvironmentV4port3pidACs6UInt16V_SStcfc",
+            "mangledName": "$s9ByteBuddy11EnvironmentV4port3pidACs6UInt16V_SStcfc",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9ByteBuddy11EnvironmentV",
+        "mangledName": "$s9ByteBuddy11EnvironmentV",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "XCTest",
+        "printedName": "XCTest",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MemoryProfiler",
+        "printedName": "MemoryProfiler",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(env:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MemoryProfiler",
+                "printedName": "ByteBuddy.MemoryProfiler",
+                "usr": "s:9ByteBuddy14MemoryProfilerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Environment",
+                "printedName": "ByteBuddy.Environment",
+                "usr": "s:9ByteBuddy11EnvironmentV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ByteBuddy14MemoryProfilerC3envAcA11EnvironmentV_tcfc",
+            "mangledName": "$s9ByteBuddy14MemoryProfilerC3envAcA11EnvironmentV_tcfc",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "detectLeaks",
+            "printedName": "detectLeaks()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LeaksOutput",
+                "printedName": "ByteBuddy.LeaksOutput",
+                "usr": "s:9ByteBuddy11LeaksOutputV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ByteBuddy14MemoryProfilerC11detectLeaksAA0F6OutputVyYaKF",
+            "mangledName": "$s9ByteBuddy14MemoryProfilerC11detectLeaksAA0F6OutputVyYaKF",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "takeHeapSnapshot",
+            "printedName": "takeHeapSnapshot(isIncluded:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HeapOutput",
+                "printedName": "ByteBuddy.HeapOutput",
+                "usr": "s:9ByteBuddy10HeapOutputV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((ByteBuddy.HeapOutput.Object) -> Swift.Bool)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ByteBuddy.HeapOutput.Object) -> Swift.Bool",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Object",
+                        "printedName": "ByteBuddy.HeapOutput.Object",
+                        "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ByteBuddy14MemoryProfilerC16takeHeapSnapshot10isIncludedAA0F6OutputVSbAG6ObjectVcSg_tYaKF",
+            "mangledName": "$s9ByteBuddy14MemoryProfilerC16takeHeapSnapshot10isIncludedAA0F6OutputVSbAG6ObjectVcSg_tYaKF",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "save",
+            "printedName": "save(heapOutput:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HeapOutput",
+                "printedName": "ByteBuddy.HeapOutput",
+                "usr": "s:9ByteBuddy10HeapOutputV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ByteBuddy14MemoryProfilerC4save10heapOutput2toyAA04HeapG0V_s12StaticStringVtKF",
+            "mangledName": "$s9ByteBuddy14MemoryProfilerC4save10heapOutput2toyAA04HeapG0V_s12StaticStringVtKF",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "compareHeapSnapshots",
+            "printedName": "compareHeapSnapshots(isIncluded:file:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(ByteBuddy.HeapComparingResult, [ByteBuddy.HeapOutput.Object])",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HeapComparingResult",
+                    "printedName": "ByteBuddy.HeapComparingResult",
+                    "usr": "s:9ByteBuddy19HeapComparingResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ByteBuddy.HeapOutput.Object]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Object",
+                        "printedName": "ByteBuddy.HeapOutput.Object",
+                        "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((ByteBuddy.HeapOutput.Object) -> Swift.Bool)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ByteBuddy.HeapOutput.Object) -> Swift.Bool",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Object",
+                        "printedName": "ByteBuddy.HeapOutput.Object",
+                        "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ByteBuddy14MemoryProfilerC20compareHeapSnapshots10isIncluded4fileAA0F15ComparingResultO_SayAA0F6OutputV6ObjectVGtSbALcSg_s12StaticStringVtYaKF",
+            "mangledName": "$s9ByteBuddy14MemoryProfilerC20compareHeapSnapshots10isIncluded4fileAA0F15ComparingResultO_SayAA0F6OutputV6ObjectVGtSbALcSg_s12StaticStringVtYaKF",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9ByteBuddy14MemoryProfilerC",
+        "mangledName": "$s9ByteBuddy14MemoryProfilerC",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HeapOutput",
+        "printedName": "HeapOutput",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Object",
+            "printedName": "Object",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "count",
+                "printedName": "count",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV5countSivp",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV5countSivp",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV5countSivg",
+                    "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV5countSivg",
+                    "moduleName": "ByteBuddy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "bytes",
+                "printedName": "bytes",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV5bytesSivp",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV5bytesSivp",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV5bytesSivg",
+                    "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV5bytesSivg",
+                    "moduleName": "ByteBuddy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "avg",
+                "printedName": "avg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV3avgSdvp",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV3avgSdvp",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV3avgSdvg",
+                    "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV3avgSdvg",
+                    "moduleName": "ByteBuddy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "className",
+                "printedName": "className",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV9classNameSSvp",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV9classNameSSvp",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV9classNameSSvg",
+                    "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV9classNameSSvg",
+                    "moduleName": "ByteBuddy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "type",
+                "printedName": "type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV4typeSSSgvp",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV4typeSSSgvp",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV4typeSSSgvg",
+                    "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV4typeSSSgvg",
+                    "moduleName": "ByteBuddy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "binary",
+                "printedName": "binary",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV6binarySSSgvp",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV6binarySSSgvp",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV6binarySSSgvg",
+                    "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV6binarySSSgvg",
+                    "moduleName": "ByteBuddy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(count:bytes:avg:className:type:binary:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Object",
+                    "printedName": "ByteBuddy.HeapOutput.Object",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV5count5bytes3avg9className4type6binaryAESi_SiSdS2SSgALtcfc",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV5count5bytes3avg9className4type6binaryAESi_SiSdS2SSgALtcfc",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(count:bytes:avg:className:type:binary:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ByteBuddy.HeapOutput.Object?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Object",
+                        "printedName": "ByteBuddy.HeapOutput.Object",
+                        "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV5count5bytes3avg9className4type6binaryAESgSS_S4SSgAMtcfc",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV5count5bytes3avg9className4type6binaryAESgSS_S4SSgAMtcfc",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Object",
+                    "printedName": "ByteBuddy.HeapOutput.Object",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Object",
+                    "printedName": "ByteBuddy.HeapOutput.Object",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV2eeoiySbAE_AEtFZ",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV2eeoiySbAE_AEtFZ",
+                "moduleName": "ByteBuddy",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV4hash4intoys6HasherVz_tF",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV4hash4intoys6HasherVz_tF",
+                "moduleName": "ByteBuddy",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Object",
+                    "printedName": "ByteBuddy.HeapOutput.Object",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "ByteBuddy",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV9hashValueSivp",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV9hashValueSivp",
+                "moduleName": "ByteBuddy",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV9hashValueSivg",
+                    "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV9hashValueSivg",
+                    "moduleName": "ByteBuddy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9ByteBuddy10HeapOutputV6ObjectV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV6encode2toys7Encoder_p_tKF",
+                "moduleName": "ByteBuddy",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:9ByteBuddy10HeapOutputV6ObjectV",
+            "mangledName": "$s9ByteBuddy10HeapOutputV6ObjectV",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "objects",
+            "printedName": "objects",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ByteBuddy.HeapOutput.Object]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Object",
+                    "printedName": "ByteBuddy.HeapOutput.Object",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ByteBuddy10HeapOutputV7objectsSayAC6ObjectVGvp",
+            "mangledName": "$s9ByteBuddy10HeapOutputV7objectsSayAC6ObjectVGvp",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ByteBuddy.HeapOutput.Object]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Object",
+                        "printedName": "ByteBuddy.HeapOutput.Object",
+                        "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ByteBuddy10HeapOutputV7objectsSayAC6ObjectVGvg",
+                "mangledName": "$s9ByteBuddy10HeapOutputV7objectsSayAC6ObjectVGvg",
+                "moduleName": "ByteBuddy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(objects:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HeapOutput",
+                "printedName": "ByteBuddy.HeapOutput",
+                "usr": "s:9ByteBuddy10HeapOutputV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ByteBuddy.HeapOutput.Object]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Object",
+                    "printedName": "ByteBuddy.HeapOutput.Object",
+                    "usr": "s:9ByteBuddy10HeapOutputV6ObjectV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ByteBuddy10HeapOutputV7objectsACSayAC6ObjectVG_tcfc",
+            "mangledName": "$s9ByteBuddy10HeapOutputV7objectsACSayAC6ObjectVG_tcfc",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HeapOutput",
+                "printedName": "ByteBuddy.HeapOutput",
+                "usr": "s:9ByteBuddy10HeapOutputV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ByteBuddy10HeapOutputV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s9ByteBuddy10HeapOutputV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ByteBuddy",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HeapOutput",
+                "printedName": "ByteBuddy.HeapOutput",
+                "usr": "s:9ByteBuddy10HeapOutputV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HeapOutput",
+                "printedName": "ByteBuddy.HeapOutput",
+                "usr": "s:9ByteBuddy10HeapOutputV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ByteBuddy10HeapOutputV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9ByteBuddy10HeapOutputV2eeoiySbAC_ACtFZ",
+            "moduleName": "ByteBuddy",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ByteBuddy10HeapOutputV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s9ByteBuddy10HeapOutputV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ByteBuddy",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9ByteBuddy10HeapOutputV",
+        "mangledName": "$s9ByteBuddy10HeapOutputV",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LeaksOutput",
+        "printedName": "LeaksOutput",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "count",
+            "printedName": "count",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ByteBuddy11LeaksOutputV5countSivp",
+            "mangledName": "$s9ByteBuddy11LeaksOutputV5countSivp",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ByteBuddy11LeaksOutputV5countSivg",
+                "mangledName": "$s9ByteBuddy11LeaksOutputV5countSivg",
+                "moduleName": "ByteBuddy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ByteBuddy11LeaksOutputV7messageSSvp",
+            "mangledName": "$s9ByteBuddy11LeaksOutputV7messageSSvp",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ByteBuddy11LeaksOutputV7messageSSvg",
+                "mangledName": "$s9ByteBuddy11LeaksOutputV7messageSSvg",
+                "moduleName": "ByteBuddy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(count:message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LeaksOutput",
+                "printedName": "ByteBuddy.LeaksOutput",
+                "usr": "s:9ByteBuddy11LeaksOutputV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ByteBuddy11LeaksOutputV5count7messageACSi_SStcfc",
+            "mangledName": "$s9ByteBuddy11LeaksOutputV5count7messageACSi_SStcfc",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9ByteBuddy11LeaksOutputV",
+        "mangledName": "$s9ByteBuddy11LeaksOutputV",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "ByteBuddy"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Common",
+        "printedName": "Common",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "urlPath",
+            "printedName": "urlPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ByteBuddy6CommonO7urlPathSSvpZ",
+            "mangledName": "$s9ByteBuddy6CommonO7urlPathSSvpZ",
+            "moduleName": "ByteBuddy",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ByteBuddy6CommonO7urlPathSSvgZ",
+                "mangledName": "$s9ByteBuddy6CommonO7urlPathSSvgZ",
+                "moduleName": "ByteBuddy",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Error",
+            "printedName": "Error",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "urlIsNotValid",
+                "printedName": "urlIsNotValid",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ByteBuddy.Common.Error.Type) -> (Swift.String) -> ByteBuddy.Common.Error",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> ByteBuddy.Common.Error",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ByteBuddy.Common.Error.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9ByteBuddy6CommonO5ErrorO13urlIsNotValidyAESScAEmF",
+                "mangledName": "$s9ByteBuddy6CommonO5ErrorO13urlIsNotValidyAESScAEmF",
+                "moduleName": "ByteBuddy"
+              },
+              {
+                "kind": "Var",
+                "name": "noHttpResponse",
+                "printedName": "noHttpResponse",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ByteBuddy.Common.Error.Type) -> ByteBuddy.Common.Error",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "ByteBuddy.Common.Error",
+                        "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ByteBuddy.Common.Error.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9ByteBuddy6CommonO5ErrorO14noHttpResponseyA2EmF",
+                "mangledName": "$s9ByteBuddy6CommonO5ErrorO14noHttpResponseyA2EmF",
+                "moduleName": "ByteBuddy"
+              },
+              {
+                "kind": "Var",
+                "name": "unexpectedHttpStatusCode",
+                "printedName": "unexpectedHttpStatusCode",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ByteBuddy.Common.Error.Type) -> (Foundation.HTTPURLResponse) -> ByteBuddy.Common.Error",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Foundation.HTTPURLResponse) -> ByteBuddy.Common.Error",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HTTPURLResponse",
+                            "printedName": "Foundation.HTTPURLResponse",
+                            "usr": "c:objc(cs)NSHTTPURLResponse"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ByteBuddy.Common.Error.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9ByteBuddy6CommonO5ErrorO24unexpectedHttpStatusCodeyAESo17NSHTTPURLResponseCcAEmF",
+                "mangledName": "$s9ByteBuddy6CommonO5ErrorO24unexpectedHttpStatusCodeyAESo17NSHTTPURLResponseCcAEmF",
+                "moduleName": "ByteBuddy"
+              },
+              {
+                "kind": "Var",
+                "name": "shellError",
+                "printedName": "shellError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ByteBuddy.Common.Error.Type) -> (Swift.String?) -> ByteBuddy.Common.Error",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String?) -> ByteBuddy.Common.Error",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(output: Swift.String?)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Swift.String?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ByteBuddy.Common.Error.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9ByteBuddy6CommonO5ErrorO05shellD0yAESSSg_tcAEmF",
+                "mangledName": "$s9ByteBuddy6CommonO5ErrorO05shellD0yAESSSg_tcAEmF",
+                "moduleName": "ByteBuddy"
+              },
+              {
+                "kind": "Var",
+                "name": "parsingError",
+                "printedName": "parsingError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ByteBuddy.Common.Error.Type) -> (Foundation.Data) -> ByteBuddy.Common.Error",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Foundation.Data) -> ByteBuddy.Common.Error",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(output: Foundation.Data)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Data",
+                                "printedName": "Foundation.Data",
+                                "usr": "s:10Foundation4DataV"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ByteBuddy.Common.Error.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9ByteBuddy6CommonO5ErrorO07parsingD0yAE10Foundation4DataV_tcAEmF",
+                "mangledName": "$s9ByteBuddy6CommonO5ErrorO07parsingD0yAE10Foundation4DataV_tcAEmF",
+                "moduleName": "ByteBuddy"
+              },
+              {
+                "kind": "Var",
+                "name": "unknown",
+                "printedName": "unknown",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ByteBuddy.Common.Error.Type) -> ByteBuddy.Common.Error",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "ByteBuddy.Common.Error",
+                        "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ByteBuddy.Common.Error.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9ByteBuddy6CommonO5ErrorO7unknownyA2EmF",
+                "mangledName": "$s9ByteBuddy6CommonO5ErrorO7unknownyA2EmF",
+                "moduleName": "ByteBuddy"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:9ByteBuddy6CommonO5ErrorO",
+            "mangledName": "$s9ByteBuddy6CommonO5ErrorO",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Error",
+                "printedName": "Error",
+                "usr": "s:s5ErrorP",
+                "mangledName": "$ss5ErrorP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9ByteBuddy6CommonO",
+        "mangledName": "$s9ByteBuddy6CommonO",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HeaderFieldKey",
+        "printedName": "HeaderFieldKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cmd",
+            "printedName": "cmd",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ByteBuddy.HeaderFieldKey.Type) -> ByteBuddy.HeaderFieldKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HeaderFieldKey",
+                    "printedName": "ByteBuddy.HeaderFieldKey",
+                    "usr": "s:9ByteBuddy14HeaderFieldKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ByteBuddy.HeaderFieldKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderFieldKey",
+                        "printedName": "ByteBuddy.HeaderFieldKey",
+                        "usr": "s:9ByteBuddy14HeaderFieldKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ByteBuddy14HeaderFieldKeyO3cmdyA2CmF",
+            "mangledName": "$s9ByteBuddy14HeaderFieldKeyO3cmdyA2CmF",
+            "moduleName": "ByteBuddy",
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "pid",
+            "printedName": "pid",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ByteBuddy.HeaderFieldKey.Type) -> ByteBuddy.HeaderFieldKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HeaderFieldKey",
+                    "printedName": "ByteBuddy.HeaderFieldKey",
+                    "usr": "s:9ByteBuddy14HeaderFieldKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ByteBuddy.HeaderFieldKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderFieldKey",
+                        "printedName": "ByteBuddy.HeaderFieldKey",
+                        "usr": "s:9ByteBuddy14HeaderFieldKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ByteBuddy14HeaderFieldKeyO3pidyA2CmF",
+            "mangledName": "$s9ByteBuddy14HeaderFieldKeyO3pidyA2CmF",
+            "moduleName": "ByteBuddy",
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ByteBuddy14HeaderFieldKeyO8rawValueSSvp",
+            "mangledName": "$s9ByteBuddy14HeaderFieldKeyO8rawValueSSvp",
+            "moduleName": "ByteBuddy",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ByteBuddy14HeaderFieldKeyO8rawValueSSvg",
+                "mangledName": "$s9ByteBuddy14HeaderFieldKeyO8rawValueSSvg",
+                "moduleName": "ByteBuddy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ByteBuddy.HeaderFieldKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HeaderFieldKey",
+                    "printedName": "ByteBuddy.HeaderFieldKey",
+                    "usr": "s:9ByteBuddy14HeaderFieldKeyO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ByteBuddy14HeaderFieldKeyO8rawValueACSgSS_tcfc",
+            "mangledName": "$s9ByteBuddy14HeaderFieldKeyO8rawValueACSgSS_tcfc",
+            "moduleName": "ByteBuddy",
+            "implicit": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9ByteBuddy14HeaderFieldKeyO",
+        "mangledName": "$s9ByteBuddy14HeaderFieldKeyO",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "AccessControl",
+          "Frozen",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Logger",
+        "printedName": "Logger",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "log",
+            "printedName": "log(_:level:file:function:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSLogType",
+                "printedName": "os.OSLogType",
+                "hasDefaultArg": true,
+                "usr": "c:@EA@os_log_type_t"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ByteBuddy6LoggerO3log_5level4file8functionySS_So03os_D7_type_taS2StFZ",
+            "mangledName": "$s9ByteBuddy6LoggerO3log_5level4file8functionySS_So03os_D7_type_taS2StFZ",
+            "moduleName": "ByteBuddy",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9ByteBuddy6LoggerO",
+        "mangledName": "$s9ByteBuddy6LoggerO",
+        "moduleName": "ByteBuddy",
+        "declAttributes": [
+          "AccessControl",
+          "Frozen",
+          "RawDocComment"
+        ],
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "URLSession",
+        "printedName": "URLSession",
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSURLSession",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "intro_iOS": "7.0",
+        "objc_name": "NSURLSession",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "XCUIApplication",
+        "printedName": "XCUIApplication",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "pid",
+            "printedName": "pid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So15XCUIApplicationC9ByteBuddyE3pidSiSgvp",
+            "mangledName": "$sSo15XCUIApplicationC9ByteBuddyE3pidSiSgvp",
+            "moduleName": "ByteBuddy",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So15XCUIApplicationC9ByteBuddyE3pidSiSgvg",
+                "mangledName": "$sSo15XCUIApplicationC9ByteBuddyE3pidSiSgvg",
+                "moduleName": "ByteBuddy",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)XCUIApplication",
+        "moduleName": "XCTest",
+        "isOpen": true,
+        "objc_name": "XCUIApplication",
+        "declAttributes": [
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)XCUIElement",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "XCTest.XCUIElement",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Command.swift",
+      "kind": "StringLiteral",
+      "offset": 828,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Extensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 234,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Extensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 416,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 542,
+      "length": 26,
+      "value": "\"http:\/\/localhost:\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 567,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 329,
+      "length": 2,
+      "value": "36"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1069,
+      "length": 2,
+      "value": "36"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 1955,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2083,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2121,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2157,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2322,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2371,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2479,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2533,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2658,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2718,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 2739,
+      "length": 3,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 2887,
+      "length": 3,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 3540,
+      "length": 7,
+      "value": "\"equal\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 3613,
+      "length": 4,
+      "value": "\"\n\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 3755,
+      "length": 141,
+      "value": "\"[+] – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 3780,
+      "length": 1,
+      "value": "\" (count – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 3800,
+      "length": 1,
+      "value": "\", bytes – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 3824,
+      "length": 1,
+      "value": "\", avg – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 3844,
+      "length": 1,
+      "value": "\", type – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 3867,
+      "length": 1,
+      "value": "\", binary – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 3893,
+      "length": 1,
+      "value": "\"\n\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 4068,
+      "length": 150,
+      "value": "\"[-] – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 4093,
+      "length": 1,
+      "value": "\" (count – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 4113,
+      "length": 1,
+      "value": "\", bytes – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 4137,
+      "length": 1,
+      "value": "\", avg – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 4157,
+      "length": 1,
+      "value": "\", type – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 4183,
+      "length": 5,
+      "value": "\"nil\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 4189,
+      "length": 1,
+      "value": "\", binary – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Heap.swift",
+      "kind": "StringLiteral",
+      "offset": 4215,
+      "length": 1,
+      "value": "\"\n\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Leaks.swift",
+      "kind": "StringLiteral",
+      "offset": 365,
+      "length": 42,
+      "value": "\"(leaks Report Version:\\s*\\d+\\.\\d+.*)\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Leaks.swift",
+      "kind": "Array",
+      "offset": 594,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Leaks.swift",
+      "kind": "IntegerLiteral",
+      "offset": 623,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Leaks.swift",
+      "kind": "IntegerLiteral",
+      "offset": 701,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Leaks.swift",
+      "kind": "StringLiteral",
+      "offset": 1147,
+      "length": 48,
+      "value": "\".*(\\d+) leaks for (\\d+) total leaked bytes.*\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Leaks.swift",
+      "kind": "Array",
+      "offset": 1275,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Leaks.swift",
+      "kind": "Array",
+      "offset": 1351,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Leaks.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1467,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Parser\/Parser+Leaks.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1645,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 326,
+      "length": 9,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 334,
+      "length": 64,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 350,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 444,
+      "length": 9,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 452,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 549,
+      "length": 17,
+      "value": "\"MemorySnapshots\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 636,
+      "length": 27,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 644,
+      "length": 13,
+      "value": "\"_HeapSnapshot.json\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Extensions+XCTest.swift",
+      "kind": "StringLiteral",
+      "offset": 190,
+      "length": 11,
+      "value": "\"processID\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/MemoryProfiler.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1085,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/MemoryProfiler.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1652,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/MemoryProfiler.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2653,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/MemoryProfiler.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3140,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Outputs\/HeapOutput.swift",
+      "kind": "StringLiteral",
+      "offset": 963,
+      "length": 80,
+      "value": "\"Can't convert count – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Outputs\/HeapOutput.swift",
+      "kind": "StringLiteral",
+      "offset": 996,
+      "length": 2,
+      "value": "\" or bytes – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Outputs\/HeapOutput.swift",
+      "kind": "StringLiteral",
+      "offset": 1018,
+      "length": 2,
+      "value": "\" or avg – \""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Outputs\/HeapOutput.swift",
+      "kind": "StringLiteral",
+      "offset": 1036,
+      "length": 5,
+      "value": "\" value\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
+      "kind": "StringLiteral",
+      "offset": 120,
+      "length": 12,
+      "value": "\"\/bytebyddy\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
+      "kind": "StringLiteral",
+      "offset": 508,
+      "length": 9,
+      "value": "\"command\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
+      "kind": "StringLiteral",
+      "offset": 533,
+      "length": 20,
+      "value": "\"process_identifier\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
+      "kind": "StringLiteral",
+      "offset": 508,
+      "length": 9,
+      "value": "\"command\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
+      "kind": "StringLiteral",
+      "offset": 533,
+      "length": 20,
+      "value": "\"process_identifier\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
+      "kind": "StringLiteral",
+      "offset": 637,
+      "length": 16,
+      "value": "\"📟 ByteBuddy\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
+      "kind": "StringLiteral",
+      "offset": 703,
+      "length": 15,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
+      "kind": "StringLiteral",
+      "offset": 713,
+      "length": 1,
+      "value": "\".log\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
+      "kind": "StringLiteral",
+      "offset": 730,
+      "length": 14,
+      "value": "\"ByteBuddyLib\""
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
+      "kind": "StringLiteral",
+      "offset": 926,
+      "length": 12,
+      "value": "\"%{public}s\""
+    }
+  ]
+}
