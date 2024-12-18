@@ -1,0 +1,105 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ByteBuddy
+import Foundation
+import OSLog
+import Swift
+import XCTest
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum HeapComparingResult : Swift.Equatable {
+  public struct State : Swift.Equatable {
+    public let addedObjects: [ByteBuddy.HeapOutput.Object : Swift.Int]
+    public let missingObjects: [ByteBuddy.HeapOutput.Object : Swift.Int]
+    public static func == (a: ByteBuddy.HeapComparingResult.State, b: ByteBuddy.HeapComparingResult.State) -> Swift.Bool
+  }
+  case equal, nonEqual(state: ByteBuddy.HeapComparingResult.State)
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: ByteBuddy.HeapComparingResult, b: ByteBuddy.HeapComparingResult) -> Swift.Bool
+}
+public struct Environment {
+  public init(port: Swift.UInt16, pid: Swift.String)
+}
+extension XCUIApplication {
+  public var pid: Swift.Int? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class MemoryProfiler {
+  public init(env: ByteBuddy.Environment)
+  @objc deinit
+}
+extension ByteBuddy.MemoryProfiler {
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func detectLeaks() async throws -> ByteBuddy.LeaksOutput
+  #endif
+}
+extension ByteBuddy.MemoryProfiler {
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func takeHeapSnapshot(isIncluded: ((ByteBuddy.HeapOutput.Object) -> Swift.Bool)? = nil) async throws -> ByteBuddy.HeapOutput
+  #endif
+  final public func save(heapOutput: ByteBuddy.HeapOutput, to file: Swift.StaticString = #file) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func compareHeapSnapshots(isIncluded: ((ByteBuddy.HeapOutput.Object) -> Swift.Bool)? = nil, file: Swift.StaticString = #file) async throws -> (ByteBuddy.HeapComparingResult, [ByteBuddy.HeapOutput.Object])
+  #endif
+}
+public struct HeapOutput : Swift.Equatable, Swift.Codable {
+  public struct Object : Swift.Hashable, Swift.Codable {
+    public let count: Swift.Int
+    public let bytes: Swift.Int
+    public let avg: Swift.Double
+    public let className: Swift.String
+    public let type: Swift.String?
+    public let binary: Swift.String?
+    public init(count: Swift.Int, bytes: Swift.Int, avg: Swift.Double, className: Swift.String, type: Swift.String?, binary: Swift.String?)
+    public init?(count: Swift.String, bytes: Swift.String, avg: Swift.String, className: Swift.String, type: Swift.String?, binary: Swift.String?)
+    public static func == (lhs: ByteBuddy.HeapOutput.Object, rhs: ByteBuddy.HeapOutput.Object) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public let objects: [ByteBuddy.HeapOutput.Object]
+  public init(objects: [ByteBuddy.HeapOutput.Object])
+  public static func == (a: ByteBuddy.HeapOutput, b: ByteBuddy.HeapOutput) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LeaksOutput {
+  public let count: Swift.Int
+  public let message: Swift.String
+  public init(count: Swift.Int, message: Swift.String)
+}
+public enum Common {
+  public static let urlPath: Swift.String
+  public enum Error : Swift.Error {
+    case urlIsNotValid(_: Swift.String)
+    case noHttpResponse
+    case unexpectedHttpStatusCode(_: Foundation.HTTPURLResponse)
+    case shellError(output: Swift.String?)
+    case parsingError(output: Foundation.Data)
+    case unknown
+  }
+}
+@frozen public enum HeaderFieldKey : Swift.String {
+  case cmd
+  case pid
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@frozen public enum Logger {
+  public static func log(_ message: Swift.String, level: os.OSLogType = .info, file: Swift.String = #file, function: Swift.String = #function)
+}
+extension ByteBuddy.HeaderFieldKey : Swift.Equatable {}
+extension ByteBuddy.HeaderFieldKey : Swift.Hashable {}
+extension ByteBuddy.HeaderFieldKey : Swift.RawRepresentable {}
+extension ByteBuddy.HeaderFieldKey : Swift.Sendable {}
+extension ByteBuddy.Logger : Swift.Sendable {}
