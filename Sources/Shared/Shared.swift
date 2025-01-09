@@ -32,7 +32,6 @@ public enum HeaderFieldKey: String {
 @frozen
 public enum Logger {
     private static let prefix = "📟 ByteBuddy"
-
     private static let osLog = OSLog(subsystem: "\(prefix).log", category: "ByteBuddyLib")
 
     public static func log(

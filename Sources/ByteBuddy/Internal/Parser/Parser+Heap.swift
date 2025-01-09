@@ -6,53 +6,37 @@ import Shared
 
 extension Parser {
     enum Heap {
-        static func parseHeapOutput(_ data: Data, isIncluded: (HeapOutput.Object) -> Bool) throws -> HeapOutput {
-            guard let dataLines = String(data: data, encoding: .utf8)?.components(separatedBy: .newlines).dropFirst(36) else {
-                throw Common.Error.parsingError(output: data)
-            }
-
-            let objects = dataLines.compactMap { line -> HeapOutput.Object? in
-                let object = parseHeapOutput(line: line)
-
-                guard let object, isIncluded(object) else {
-                    return nil
-                }
-
-                return object
-            }
-
-            return HeapOutput(objects: objects)
-        }
-
         static func parseHeapOutput(
             _ data: Data,
-            isIncluded: (HeapOutput.Object) -> Bool
-        ) throws -> ([HeapOutput.Object: Int], [HeapOutput.Object]) {
+            isIncluded: (HeapOutput) -> Bool
+        ) throws -> [HeapEntity.Object: HeapEntity.Value] {
             guard let dataLines = String(data: data, encoding: .utf8)?.components(separatedBy: .newlines).dropFirst(36) else {
                 throw Common.Error.parsingError(output: data)
             }
 
-            var objects = [HeapOutput.Object: Int]()
-            var collisions = [HeapOutput.Object]()
+            var objects = [HeapEntity.Object: HeapEntity.Value]()
 
             dataLines.forEach { line in
-                let object = parseHeapOutput(line: line)
-
-                guard let object, isIncluded(object) else {
+                guard 
+                    let (object, value) = parseHeapOutput(line: line),
+                    let unwrappedObject = object,
+                    let unwrappedValue = value
+                else {
+                    Logger.log("Parse heap output failure")
                     return
                 }
 
-                if objects.keys.contains(object) {
-                    collisions.append(object)
+                guard isIncluded(HeapOutput(object: unwrappedObject, value: unwrappedValue)) else {
+                    return
                 }
 
-                objects.increment(for: object)
+                objects.increment(for: unwrappedObject, value: unwrappedValue)
             }
 
-            return (objects, collisions)
+            return objects
         }
 
-        private static func parseHeapOutput(line: String) -> HeapOutput.Object? {
+        private static func parseHeapOutput(line: String) -> (HeapEntity.Object?, HeapEntity.Value?)? {
             let trimmedLine = line.trimmingCharacters(in: .whitespacesAndNewlines)
             let components = trimmedLine.components(separatedBy: .whitespaces).filter { $0 != "" }
 
@@ -62,7 +46,6 @@ extension Parser {
 
             let count = components[0]
             let bytes = components[1]
-            let avg = components[2]
             let binary: String?
             let type: String?
             let className: String
@@ -83,24 +66,25 @@ extension Parser {
                 className = remainingComponents.joined(separator: " ")
             }
 
-            let object = HeapOutput.Object(
-                count: count,
-                bytes: bytes,
-                avg: avg,
+            let object = HeapEntity.Object(
                 className: className,
                 type: type,
                 binary: binary
             )
+            let value = HeapEntity.Value(
+                count: count,
+                bytes: bytes
+            )
 
-            return object
+            return (object, value)
         }
     }
 }
 
 public enum HeapComparingResult: Equatable {
     public struct State: Equatable {
-        public let addedObjects: [HeapOutput.Object: Int]
-        public let missingObjects: [HeapOutput.Object: Int]
+        public let addedObjects: [HeapOutput]
+        public let missingObjects: [HeapOutput]
     }
 
     case equal, nonEqual(state: State)
@@ -111,14 +95,14 @@ public enum HeapComparingResult: Equatable {
             return "equal"
         case .nonEqual(let state):
             var description = "\n"
-            state.addedObjects.forEach { (key: HeapOutput.Object, value: Int) in
+            state.addedObjects.forEach {
                 description.append(
-                    "[+] – \(key.className) (count – \(value), bytes – \(key.bytes), avg – \(key.avg), type – \(key.type), binary – \(key.binary)\n"
+                    "[+] – \($0.className) (count – \($0.count), bytes – \($0.bytes), avg – \($0.avg), type – \($0.type), binary – \($0.binary)\n"
                 )
             }
-            state.missingObjects.forEach { (key: HeapOutput.Object, value: Int) in
+            state.missingObjects.forEach {
                 description.append(
-                    "[-] – \(key.className) (count – \(value), bytes – \(key.bytes), avg – \(key.avg), type – \(key.type ?? "nil"), binary – \(key.binary)\n"
+                    "[-] – \($0.className) (count – \($0.count), bytes – \($0.bytes), avg – \($0.avg), type – \($0.type ?? "nil"), binary – \($0.binary)\n"
                 )
             }
 

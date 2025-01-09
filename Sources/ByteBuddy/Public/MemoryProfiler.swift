@@ -34,45 +34,59 @@ public extension MemoryProfiler {
 // MARK: - Heap
 
 public extension MemoryProfiler {
-    func takeHeapSnapshot(isIncluded: ((HeapOutput.Object) -> Bool)? = nil) async throws -> HeapOutput {
+    func takeHeapSnapshot(isIncluded: ((HeapOutput) -> Bool)? = nil) async throws -> [HeapOutput] {
         let data = try await execute(.heap)
-        let heapOutput: HeapOutput = try Parser.Heap.parseHeapOutput(
+        let heapObjects = try Parser.Heap.parseHeapOutput(
             data,
             isIncluded: isIncluded ?? { _ in true }
         )
 
-        return heapOutput
+        return heapObjects.map { HeapOutput(object: $0, value: $1) }
     }
 
-    func save(heapOutput: HeapOutput, to file: StaticString = #file) throws {
+    func save(heapOutput: [HeapOutput], to file: StaticString = #file) throws {
         try save(heapOutput, to: file)
     }
 
     func compareHeapSnapshots(
-        isIncluded: ((HeapOutput.Object) -> Bool)? = nil,
+        isIncluded: ((HeapOutput) -> Bool)? = nil,
         file: StaticString = #file
-    ) async throws -> (HeapComparingResult, [HeapOutput.Object]) {
+    ) async throws -> HeapComparingResult {
         let data = try await execute(.heap)
-        var diff = [HeapOutput.Object: Int]()
-        var (heapObjects, collisions) = try Parser.Heap.parseHeapOutput(data, isIncluded: isIncluded ?? { _ in true })
+        var diff = [HeapEntity.Object: HeapEntity.Value]()
+        var heapObjects = try Parser.Heap.parseHeapOutput(
+            data,
+            isIncluded: isIncluded ?? { _ in true }
+        )
         let heapSnapshot = try loadSnapshot(from: file)
 
-        heapSnapshot.objects.forEach { object in
+        heapSnapshot.forEach {
+            let object = HeapEntity.Object(className: $0.className, type: $0.type, binary: $0.binary)
+            let value = HeapEntity.Value(count: $0.count, bytes: $0.bytes)
+
             if heapObjects.keys.contains(object) {
-                heapObjects.decrement(for: object)
+                let remainingResult = heapObjects.decrement(for: object, value: value)
+                guard let (excessObject, excessValue) = remainingResult else {
+                    return
+                }
+                diff.increment(for: excessObject, value: excessValue)
             } else {
-                diff.increment(for: object)
+                diff.increment(for: object, value: value)
             }
         }
 
         guard diff.isEmpty, heapObjects.isEmpty else {
             return (
-                .nonEqual(state: HeapComparingResult.State(addedObjects: heapObjects, missingObjects: diff)),
-                collisions
+                .nonEqual(
+                    state: HeapComparingResult.State(
+                        addedObjects: heapObjects.map { HeapOutput(object: $0, value: $1)},
+                        missingObjects: diff.map { HeapOutput(object: $0, value: $1)}
+                    )
+                )
             )
         }
 
-        return (.equal, collisions)
+        return (.equal)
     }
 }
 
@@ -94,7 +108,7 @@ private extension MemoryProfiler {
         return data
     }
 
-    func save(_ output: HeapOutput, to file: StaticString) throws {
+    func save(_ output: [HeapOutput], to file: StaticString) throws {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
 
@@ -105,10 +119,10 @@ private extension MemoryProfiler {
         try jsonData.write(to: snapshotsSource.url)
     }
 
-    func loadSnapshot(from file: StaticString) throws -> HeapOutput {
+    func loadSnapshot(from file: StaticString) throws -> [HeapOutput] {
         let snapshotsSource = SnapshotsSource.getFileURL(file)
         let jsonData = try Data(contentsOf: snapshotsSource.url)
-        let heapOutput = try JSONDecoder().decode(HeapOutput.self, from: jsonData)
+        let heapOutput = try JSONDecoder().decode([HeapOutput].self, from: jsonData)
         return heapOutput
     }
 }

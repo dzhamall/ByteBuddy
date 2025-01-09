@@ -48,6 +48,7 @@ All zones: 19103 nodes (2662832 bytes)
        2         64      32.0   NSHashTable.slice.acquisitionProps (struct NSSliceExternalAcquisitionProperties)  C       Foundation
        2         64      32.0   std::__shared_ptr_pointer<MCacheData*, std::shared_ptr<MCacheData>::__shared_ptr_default_delete<MCacheData, MCacheData>>  C++     libFontParser.dylib
        1        944     944.0   ViewController                                    Swift   ByteBuddyExample
+       2        944     944.0   ExampleClass                                      Swift   ByteBuddyExample
        1        880     880.0   UIWindow                                          ObjC    UIKitCore
        1        240     240.0   _UIRemoteKeyboards                                ObjC    UIKitCore
        1        224     224.0   UIEventEnvironment                                ObjC    UIKitCore
@@ -112,5 +113,6 @@ All zones: 19103 nodes (2662832 bytes)
        1        128     128.0   Swift._DictionaryStorage<Swift.String, Foundation._Locale>  Swift   libswiftCore.dylib
        1        128     128.0   Swift._DictionaryStorage<Swift.String, Foundation._NSSwiftLocale>  Swift   libswiftCore.dylib
        1        944     944.0   ViewController                                    Swift   ByteBuddyExample
-       2        944     924.0   ViewController                                    Swift   ByteBuddyExample
+       2        944     944.0   ViewController                                    Swift   ByteBuddyExample
+       2         32      32.0   Presenter                                         Swift   ByteBuddyExample
 """.data(using: .utf8)!

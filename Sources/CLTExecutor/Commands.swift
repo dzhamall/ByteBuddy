@@ -34,7 +34,7 @@ struct StartServer: ParsableCommand {
     }
 }
 
-private func runCommand(_ cmd: String) -> Result<String, Shared.ByteBuddy.Error> {
+private func runCommand(_ cmd: String) -> Result<String, Shared.Common.Error> {
     Logger.log("Run command: \(cmd) ⚙️")
 
     let output = Shell.execute(cmd)

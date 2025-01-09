@@ -1,0 +1,18 @@
+[
+  {
+    "count" : 4,
+    "className" : "ViewController",
+    "binary" : "ByteBuddyExample",
+    "type" : "Swift",
+    "avg" : 708,
+    "bytes" : 2832
+  },
+  {
+    "bytes" : 32,
+    "type" : "Swift",
+    "count" : 2,
+    "avg" : 16,
+    "className" : "Presenter",
+    "binary" : "ByteBuddyExample"
+  }
+]

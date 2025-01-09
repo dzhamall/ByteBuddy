@@ -27,8 +27,8 @@ final class Server {
         server.stop()
     }
 
-    func handleRequest(_ completion: @escaping (String, String) -> Result<String, Shared.ByteBuddy.Error>) {
-        server.GET[Shared.ByteBuddy.urlPath] = { request in
+    func handleRequest(_ completion: @escaping (String, String) -> Result<String, Shared.Common.Error>) {
+        server.GET[Shared.Common.urlPath] = { request in
             guard let command = request.headerValue(for: .cmd) else {
                 return .badRequest(.text("Exectuble command is nil"))
             }
