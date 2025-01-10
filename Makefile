@@ -50,10 +50,10 @@ createXCFramework:
 	SKIP_INSTALL=NO \
 	BUILD_LIBRARY_FOR_DISTRIBUTION=YES  \
 	INSTALL_PATH=$(FRAMEWORKS_INSTALL_PATH) \
-    MODULES_FOLDER_PATH=${MODULE_NAME}.framework/Modules \
-    PRODUCT_TYPE=com.apple.product-type.framework \
-    PUBLIC_HEADERS_FOLDER_PATH=${MODULE_NAME}.framework/Headers \
-    SWIFT_INSTALL_OBJC_HEADER=YES \
+	MODULES_FOLDER_PATH=${MODULE_NAME}.framework/Modules \
+	PRODUCT_TYPE=com.apple.product-type.framework \
+	PUBLIC_HEADERS_FOLDER_PATH=${MODULE_NAME}.framework/Headers \
+	SWIFT_INSTALL_OBJC_HEADER=YES \
 
 	find . -type f -name "*.swiftinterface" -exec sed -i '' 's/XCTest\.XCUIApplication/XCUIApplication/g' {} +
 
