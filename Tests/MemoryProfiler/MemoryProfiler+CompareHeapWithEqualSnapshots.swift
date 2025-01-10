@@ -52,7 +52,7 @@ final class MemoryProfilerCompareHeapWithEqualSnapshotsTests: XCTestCase {
         // Act
         let result = try await memoryProfiler.compareHeapSnapshots(isIncluded: { $0.binary == "ByteBuddyExample"})
 
-        // Arrange
+        // Assert
         XCTAssertEqual(result, .equal, result.description)
     }
 }
