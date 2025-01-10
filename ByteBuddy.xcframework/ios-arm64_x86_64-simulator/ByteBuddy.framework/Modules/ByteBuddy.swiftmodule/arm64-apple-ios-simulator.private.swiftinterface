@@ -11,8 +11,8 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 public enum HeapComparingResult : Swift.Equatable {
   public struct State : Swift.Equatable {
-    public let addedObjects: [ByteBuddy.HeapOutput.Object : Swift.Int]
-    public let missingObjects: [ByteBuddy.HeapOutput.Object : Swift.Int]
+    public let addedObjects: [ByteBuddy.HeapOutput]
+    public let missingObjects: [ByteBuddy.HeapOutput]
     public static func == (a: ByteBuddy.HeapComparingResult.State, b: ByteBuddy.HeapComparingResult.State) -> Swift.Bool
   }
   case equal, nonEqual(state: ByteBuddy.HeapComparingResult.State)
@@ -40,33 +40,21 @@ extension ByteBuddy.MemoryProfiler {
 }
 extension ByteBuddy.MemoryProfiler {
   #if compiler(>=5.3) && $AsyncAwait
-  final public func takeHeapSnapshot(isIncluded: ((ByteBuddy.HeapOutput.Object) -> Swift.Bool)? = nil) async throws -> ByteBuddy.HeapOutput
+  final public func takeHeapSnapshot(isIncluded: ((ByteBuddy.HeapOutput) -> Swift.Bool)? = nil) async throws -> [ByteBuddy.HeapOutput]
   #endif
-  final public func save(heapOutput: ByteBuddy.HeapOutput, to file: Swift.StaticString = #file) throws
+  final public func save(heapOutput: [ByteBuddy.HeapOutput], to file: Swift.StaticString = #file) throws
   #if compiler(>=5.3) && $AsyncAwait
-  final public func compareHeapSnapshots(isIncluded: ((ByteBuddy.HeapOutput.Object) -> Swift.Bool)? = nil, file: Swift.StaticString = #file) async throws -> (ByteBuddy.HeapComparingResult, [ByteBuddy.HeapOutput.Object])
+  final public func compareHeapSnapshots(isIncluded: ((ByteBuddy.HeapOutput) -> Swift.Bool)? = nil, file: Swift.StaticString = #file) async throws -> ByteBuddy.HeapComparingResult
   #endif
 }
-public struct HeapOutput : Swift.Equatable, Swift.Codable {
-  public struct Object : Swift.Hashable, Swift.Codable {
-    public let count: Swift.Int
-    public let bytes: Swift.Int
-    public let avg: Swift.Double
-    public let className: Swift.String
-    public let type: Swift.String?
-    public let binary: Swift.String?
-    public init(count: Swift.Int, bytes: Swift.Int, avg: Swift.Double, className: Swift.String, type: Swift.String?, binary: Swift.String?)
-    public init?(count: Swift.String, bytes: Swift.String, avg: Swift.String, className: Swift.String, type: Swift.String?, binary: Swift.String?)
-    public static func == (lhs: ByteBuddy.HeapOutput.Object, rhs: ByteBuddy.HeapOutput.Object) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public func encode(to encoder: any Swift.Encoder) throws
-    public var hashValue: Swift.Int {
-      get
-    }
-    public init(from decoder: any Swift.Decoder) throws
-  }
-  public let objects: [ByteBuddy.HeapOutput.Object]
-  public init(objects: [ByteBuddy.HeapOutput.Object])
+public struct HeapOutput : Swift.Codable, Swift.Equatable {
+  public let className: Swift.String
+  public let type: Swift.String?
+  public let binary: Swift.String?
+  public let count: Swift.Int
+  public let bytes: Swift.Int
+  public let avg: Swift.Int
+  public init(className: Swift.String, type: Swift.String?, binary: Swift.String?, count: Swift.Int, bytes: Swift.Int, avg: Swift.Int)
   public static func == (a: ByteBuddy.HeapOutput, b: ByteBuddy.HeapOutput) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
