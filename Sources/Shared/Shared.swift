@@ -15,6 +15,7 @@ public enum Common {
         case shellError(output: String?)
         case parsingError(output: Data)
 
+        case unexpectedNil(Any.Type, file: String = #fileID)
         case unknown
     }
 }

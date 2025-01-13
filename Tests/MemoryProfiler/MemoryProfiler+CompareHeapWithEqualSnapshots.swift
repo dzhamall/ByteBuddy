@@ -50,7 +50,12 @@ final class MemoryProfilerCompareHeapWithEqualSnapshotsTests: XCTestCase {
         let memoryProfiler = MemoryProfiler(env: Environment(port: 8080, pid: pid), networkSession: networkSessionMock)
 
         // Act
-        let result = try await memoryProfiler.compareHeapSnapshots(isIncluded: { $0.binary == "ByteBuddyExample"})
+        let result = try await memoryProfiler.compareHeapSnapshots(
+            source: TestsUtils.getSnapshotURL(),
+            isIncluded: {
+                $0.binary == "ByteBuddyExample"
+            }
+        )
 
         // Assert
         XCTAssertEqual(result, .equal, result.description)

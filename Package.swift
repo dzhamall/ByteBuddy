@@ -27,8 +27,18 @@ let package = Package(
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]
         ),
-        .target(name: "ByteBuddy", dependencies: ["Shared"]),
-        .testTarget(name: "Tests", dependencies: ["ByteBuddy"], path: "Tests")
+        .target(
+            name: "ByteBuddy",
+            dependencies: ["Shared"]
+        ),
+        .testTarget(
+            name: "Tests",
+            dependencies: ["ByteBuddy"],
+            path: "Tests",
+            resources: [
+                .copy("MemorySnapshots")
+            ]
+        )
     ],
     swiftLanguageVersions: [.v5]
 )

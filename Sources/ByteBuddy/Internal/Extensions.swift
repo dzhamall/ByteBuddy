@@ -42,3 +42,17 @@ extension Environment {
         "http://localhost:\(port)"
     }
 }
+
+// MARK: - Optional
+
+extension Optional {
+    func unwrap() throws -> Wrapped {
+        switch self {
+        case .none:
+            throw Common.Error.unexpectedNil(Wrapped.self)
+
+        case let .some(wrapped):
+            return wrapped
+        }
+    }
+}

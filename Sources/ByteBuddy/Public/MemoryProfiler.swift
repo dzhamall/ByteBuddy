@@ -44,13 +44,13 @@ public extension MemoryProfiler {
         return heapObjects.map { HeapOutput(object: $0, value: $1) }
     }
 
-    func save(heapOutput: [HeapOutput], to file: StaticString = #file) throws {
-        try save(heapOutput, to: file)
+    func save(heapOutput: [HeapOutput], to dir: URL, with filename: String) throws {
+        try save(heapOutput, to: dir, with: filename)
     }
 
     func compareHeapSnapshots(
-        isIncluded: ((HeapOutput) -> Bool)? = nil,
-        file: StaticString = #file
+        source: URL,
+        isIncluded: ((HeapOutput) -> Bool)? = nil
     ) async throws -> HeapComparingResult {
         let data = try await execute(.heap)
         var diff = [HeapEntity.Object: HeapEntity.Value]()
@@ -58,7 +58,7 @@ public extension MemoryProfiler {
             data,
             isIncluded: isIncluded ?? { _ in true }
         )
-        let heapSnapshot = try loadSnapshot(from: file)
+        let heapSnapshot = try loadSnapshot(from: source)
 
         heapSnapshot.forEach {
             let object = HeapEntity.Object(className: $0.className, type: $0.type, binary: $0.binary)
@@ -108,20 +108,18 @@ private extension MemoryProfiler {
         return data
     }
 
-    func save(_ output: [HeapOutput], to file: StaticString) throws {
+    func save(_ output: [HeapOutput], to dir: URL, with filename: String) throws {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
 
         let jsonData = try encoder.encode(output)
-        let snapshotsSource = SnapshotsSource.getFileURL(file)
 
-        try FileManager.default.createDirectory(at: snapshotsSource.dir, withIntermediateDirectories: true)
-        try jsonData.write(to: snapshotsSource.url)
+        try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        try jsonData.write(to: dir.appendingPathComponent(filename).appendingPathExtension(".json"))
     }
 
-    func loadSnapshot(from file: StaticString) throws -> [HeapOutput] {
-        let snapshotsSource = SnapshotsSource.getFileURL(file)
-        let jsonData = try Data(contentsOf: snapshotsSource.url)
+    func loadSnapshot(from url: URL) throws -> [HeapOutput] {
+        let jsonData = try Data(contentsOf: url)
         let heapOutput = try JSONDecoder().decode([HeapOutput].self, from: jsonData)
         return heapOutput
     }
