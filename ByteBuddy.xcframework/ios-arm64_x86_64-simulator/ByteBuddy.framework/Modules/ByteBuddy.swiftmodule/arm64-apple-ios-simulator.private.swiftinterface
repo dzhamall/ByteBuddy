@@ -42,9 +42,9 @@ extension ByteBuddy.MemoryProfiler {
   #if compiler(>=5.3) && $AsyncAwait
   final public func takeHeapSnapshot(isIncluded: ((ByteBuddy.HeapOutput) -> Swift.Bool)? = nil) async throws -> [ByteBuddy.HeapOutput]
   #endif
-  final public func save(heapOutput: [ByteBuddy.HeapOutput], to file: Swift.StaticString = #file) throws
+  final public func save(heapOutput: [ByteBuddy.HeapOutput], to dir: Foundation.URL, with filename: Swift.String) throws
   #if compiler(>=5.3) && $AsyncAwait
-  final public func compareHeapSnapshots(isIncluded: ((ByteBuddy.HeapOutput) -> Swift.Bool)? = nil, file: Swift.StaticString = #file) async throws -> ByteBuddy.HeapComparingResult
+  final public func compareHeapSnapshots(source: Foundation.URL, isIncluded: ((ByteBuddy.HeapOutput) -> Swift.Bool)? = nil) async throws -> ByteBuddy.HeapComparingResult
   #endif
 }
 public struct HeapOutput : Swift.Codable, Swift.Equatable {
@@ -72,6 +72,7 @@ public enum Common {
     case unexpectedHttpStatusCode(_: Foundation.HTTPURLResponse)
     case shellError(output: Swift.String?)
     case parsingError(output: Foundation.Data)
+    case unexpectedNil(any Any.Type, file: Swift.String = #fileID)
     case unknown
   }
 }

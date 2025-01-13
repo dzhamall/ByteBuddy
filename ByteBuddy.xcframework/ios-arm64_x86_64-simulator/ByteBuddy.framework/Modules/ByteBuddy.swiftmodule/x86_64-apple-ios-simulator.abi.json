@@ -449,16 +449,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ByteBuddy",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "Environment",
         "printedName": "Environment",
@@ -649,7 +639,7 @@
           {
             "kind": "Function",
             "name": "save",
-            "printedName": "save(heapOutput:to:)",
+            "printedName": "save(heapOutput:to:with:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -672,15 +662,20 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "StaticString",
-                "printedName": "Swift.StaticString",
-                "hasDefaultArg": true,
-                "usr": "s:s12StaticStringV"
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:9ByteBuddy14MemoryProfilerC4save10heapOutput2toySayAA04HeapG0VG_s12StaticStringVtKF",
-            "mangledName": "$s9ByteBuddy14MemoryProfilerC4save10heapOutput2toySayAA04HeapG0VG_s12StaticStringVtKF",
+            "usr": "s:9ByteBuddy14MemoryProfilerC4save10heapOutput2to4withySayAA04HeapG0VG_10Foundation3URLVSStKF",
+            "mangledName": "$s9ByteBuddy14MemoryProfilerC4save10heapOutput2to4withySayAA04HeapG0VG_10Foundation3URLVSStKF",
             "moduleName": "ByteBuddy",
             "declAttributes": [
               "Final"
@@ -692,13 +687,19 @@
           {
             "kind": "Function",
             "name": "compareHeapSnapshots",
-            "printedName": "compareHeapSnapshots(isIncluded:file:)",
+            "printedName": "compareHeapSnapshots(source:isIncluded:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "HeapComparingResult",
                 "printedName": "ByteBuddy.HeapComparingResult",
                 "usr": "s:9ByteBuddy19HeapComparingResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
               },
               {
                 "kind": "TypeNominal",
@@ -727,18 +728,11 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "StaticString",
-                "printedName": "Swift.StaticString",
-                "hasDefaultArg": true,
-                "usr": "s:s12StaticStringV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:9ByteBuddy14MemoryProfilerC20compareHeapSnapshots10isIncluded4fileAA0F15ComparingResultOSbAA0F6OutputVcSg_s12StaticStringVtYaKF",
-            "mangledName": "$s9ByteBuddy14MemoryProfilerC20compareHeapSnapshots10isIncluded4fileAA0F15ComparingResultOSbAA0F6OutputVcSg_s12StaticStringVtYaKF",
+            "usr": "s:9ByteBuddy14MemoryProfilerC20compareHeapSnapshots6source10isIncludedAA0F15ComparingResultO10Foundation3URLV_SbAA0F6OutputVcSgtYaKF",
+            "mangledName": "$s9ByteBuddy14MemoryProfilerC20compareHeapSnapshots6source10isIncludedAA0F15ComparingResultO10Foundation3URLV_SbAA0F6OutputVcSgtYaKF",
             "moduleName": "ByteBuddy",
             "declAttributes": [
               "Final"
@@ -1737,6 +1731,75 @@
               },
               {
                 "kind": "Var",
+                "name": "unexpectedNil",
+                "printedName": "unexpectedNil",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ByteBuddy.Common.Error.Type) -> (Any.Type, Swift.String) -> ByteBuddy.Common.Error",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Any.Type, Swift.String) -> ByteBuddy.Common.Error",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Any.Type, file: Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ExistentialMetatype",
+                                "printedName": "Any.Type",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ProtocolComposition",
+                                    "printedName": "Any"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ByteBuddy.Common.Error.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "ByteBuddy.Common.Error",
+                            "usr": "s:9ByteBuddy6CommonO5ErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9ByteBuddy6CommonO5ErrorO13unexpectedNilyAEypXp_SStcAEmF",
+                "mangledName": "$s9ByteBuddy6CommonO5ErrorO13unexpectedNilyAEypXp_SStcAEmF",
+                "moduleName": "ByteBuddy"
+              },
+              {
+                "kind": "Var",
                 "name": "unknown",
                 "printedName": "unknown",
                 "children": [
@@ -2654,62 +2717,6 @@
       "value": "0"
     },
     {
-      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
-      "kind": "StringLiteral",
-      "offset": 326,
-      "length": 9,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
-      "kind": "StringLiteral",
-      "offset": 334,
-      "length": 64,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
-      "kind": "BooleanLiteral",
-      "offset": 350,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
-      "kind": "StringLiteral",
-      "offset": 444,
-      "length": 9,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
-      "kind": "StringLiteral",
-      "offset": 452,
-      "length": 30,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
-      "kind": "StringLiteral",
-      "offset": 549,
-      "length": 17,
-      "value": "\"MemorySnapshots\""
-    },
-    {
-      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
-      "kind": "StringLiteral",
-      "offset": 636,
-      "length": 27,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Internal\/Utils.swift",
-      "kind": "StringLiteral",
-      "offset": 644,
-      "length": 13,
-      "value": "\"_HeapSnapshot.json\""
-    },
-    {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Extensions+XCTest.swift",
       "kind": "StringLiteral",
       "offset": 190,
@@ -2726,23 +2733,30 @@
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/MemoryProfiler.swift",
       "kind": "BooleanLiteral",
-      "offset": 1675,
+      "offset": 1680,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/MemoryProfiler.swift",
       "kind": "IntegerLiteral",
-      "offset": 3239,
+      "offset": 3246,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/MemoryProfiler.swift",
       "kind": "BooleanLiteral",
-      "offset": 3728,
+      "offset": 3669,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/MemoryProfiler.swift",
+      "kind": "StringLiteral",
+      "offset": 3766,
+      "length": 7,
+      "value": "\".json\""
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
@@ -2754,63 +2768,63 @@
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
       "kind": "StringLiteral",
-      "offset": 508,
+      "offset": 569,
       "length": 9,
       "value": "\"command\""
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
       "kind": "StringLiteral",
-      "offset": 533,
+      "offset": 594,
       "length": 20,
       "value": "\"process_identifier\""
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
       "kind": "StringLiteral",
-      "offset": 508,
+      "offset": 569,
       "length": 9,
       "value": "\"command\""
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
       "kind": "StringLiteral",
-      "offset": 533,
+      "offset": 594,
       "length": 20,
       "value": "\"process_identifier\""
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
       "kind": "StringLiteral",
-      "offset": 637,
+      "offset": 698,
       "length": 16,
       "value": "\"📟 ByteBuddy\""
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
       "kind": "StringLiteral",
-      "offset": 702,
+      "offset": 763,
       "length": 15,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
       "kind": "StringLiteral",
-      "offset": 712,
+      "offset": 773,
       "length": 1,
       "value": "\".log\""
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
       "kind": "StringLiteral",
-      "offset": 729,
+      "offset": 790,
       "length": 14,
       "value": "\"ByteBuddyLib\""
     },
     {
       "filePath": "\/Users\/a.dzhamaldinov\/Developer\/pm\/ByteBuddy\/Sources\/ByteBuddy\/Public\/Shared.swift",
       "kind": "StringLiteral",
-      "offset": 925,
+      "offset": 986,
       "length": 12,
       "value": "\"%{public}s\""
     }
