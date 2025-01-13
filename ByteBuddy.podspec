@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                  = "ByteBuddy"
-  spec.version               = "0.0.5"
+  spec.version               = "0.0.6"
   spec.summary               = "Automate Testing for Swift Memory Issues."
 
   spec.homepage              = "https://github.com/dzhamall/ByteBuddy"
